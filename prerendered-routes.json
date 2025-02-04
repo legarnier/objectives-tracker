@@ -1,6 +1,6 @@
 {
   "routes": {
-    "/objectives-tracker": {},
-    "/objectives-tracker/objectives": {}
+    "/your-repo-name": {},
+    "/your-repo-name/objectives": {}
   }
 }

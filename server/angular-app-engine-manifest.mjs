@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/objectives-tracker',
+  basePath: '/your-repo-name',
   supportedLocales: {
   "en-US": ""
 },

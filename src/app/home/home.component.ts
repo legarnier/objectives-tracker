@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DayData } from '../models/day-data.model';
 import { CommonModule } from '@angular/common';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,8 @@ export class HomeComponent {
     read: false,
   };
 
+  constructor(private firebaseService: FirebaseService) {}
+
   calculateScore(): number {
     return (
       this.today.hoursSports +
@@ -28,6 +31,8 @@ export class HomeComponent {
   }
 
   saveData(): void {
-    console.log('Data saved:', this.today);
+    this.firebaseService.addDay(this.today).then(() => {
+      console.log('Data saved to Firebase');
+    });
   }
 }

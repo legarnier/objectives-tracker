@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <h2>History</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let day of history">
+          <td>{{ day.date }}</td>
+          <td>{{ calculateScore(day) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,7 @@
+<h2>My Objectives</h2>
+<ul>
+  <li *ngFor="let obj of objectives">
+    <input type="checkbox" [checked]="obj.completed" (change)="toggleComplete(obj.id)" />
+    <span [class.completed]="obj.completed">{{ obj.title }}</span>
+  </li>
+</ul>

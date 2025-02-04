@@ -1,0 +1,6 @@
+{
+  "routes": {
+    "/objectives-tracker": {},
+    "/objectives-tracker/objectives": {}
+  }
+}
